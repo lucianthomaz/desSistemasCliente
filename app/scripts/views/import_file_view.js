@@ -15,6 +15,14 @@ App.Views = App.Views || {};
 
 				$('#jogapravencer').html(template_populated);
 			});
+		},
+
+		events: {
+			'onload #files': 'readFile'
+		},
+
+		readFile: function(ev, params) {
+			console.log(params);
 		}
 	});
 })();

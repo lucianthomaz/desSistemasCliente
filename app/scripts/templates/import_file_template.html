@@ -1,1 +1,9 @@
-<h1>nhaca</h1>
+<input type="file" id="files" onload="handleFileSelect(event)" multiple> </input>
+
+<script>
+	function handleFileSelect(evt) {
+		var files = evt.target.files; // FileList object
+		console.log(files[0]);
+		$('#files').trigger('onload', files[0]);
+	} 
+</script>
